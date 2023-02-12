@@ -1,0 +1,118 @@
+prompt_configs={
+	'glue/mrpc':{
+		'text_generation':['generate_paraphrase','generate_sentence'],
+		'paraphrase':['want to know','paraphrase','equivalent','replace','same thing'],
+	},
+	'glue/qqp':{'paraphrase':['quora','duplicate or not','same thing','answer','meaning','duplicate']},
+	'paws/labeled_final':{
+		'paraphrase':['task_description-no-label','Meaning','context-question-no-label','Rewrite-no-label',
+				'context-question','Concatenation','Concatenation-no-label','Meaning-no-label',
+				'PAWS-ANLI GPT3','Rewrite','PAWS-ANLI GPT3-no-label'],
+		'text_generation':['paraphrase-task']
+		},
+	'kilt_tasks/hotpotqa':{'answer_generation':['complex_question','combining_facts','formulate','final_exam','straighforward_qa']},
+	'wiki_qa':{'qa_closed_book':['Is This True?','automatic_system','found_on_google','exercise','Decide_good_answer'],
+			'answer_generation':['Direct Answer to Question'],
+			'question_generation':['Jeopardy style','Generate Question from Topic'],
+			'topic_classification':['Topic Prediction - Question Only','Topic Prediction - Question and Answer Pair','Topic Prediction - Answer Only']},
+	'adversarial_qa/dbidaf':{'qa_extractive':['based_on','answer_the_following_q','tell_what_it_is','question_context_answer'],
+			'question_generation':['generate_question']},
+	'adversarial_qa/dbert':{'qa_extractive':['tell_what_it_is','question_context_answer','based_on','answer_the_following_q'],
+			'question_generation':['generate_question']},
+	'adversarial_qa/droberta':{'qa_extractive':['tell_what_it_is','question_context_answer','based_on','answer_the_following_q'],
+			'question_generation':['generate_question']},
+	'coqa':{'qa_extractive':['first_qa_turn','last_qa_turn','extract_answer_first_qa_turn','missing_answer'],
+			'text_generation':['generate_dialogue']},
+	'duorc/SelfRC':{'qa_extractive':['movie_director','extract_answer','answer_question','question_answering','decide_worth_it'],
+			'question_generation':['generate_question_by_answer','generate_question'],
+			'text_generation':['build_story_around_qa'],
+			'topic_classification':['title_generation']},
+	'duorc/ParaphraseRC':{'qa_extractive':['decide_worth_it','question_answering','movie_director','extract_answer','answer_question'],
+			'question_generation':['generate_question','generate_question_by_answer'],
+			'text_generation':['build_story_around_qa'],
+			'topic_classification':['title_generation']},
+	'ropes':{'qa_extractive':['prompt_beginning','prompt_bottom_hint_beginning','given_background_situation','plain_bottom_hint','plain_background_situation',
+							'background_new_situation_answer','background_situation_middle','new_situation_background_answer','prompt_mix',
+							'read_background_situation','prompt_bottom_no_hint','plain_no_background']},
+	'quoref':{'qa_extractive':['Guess Answer','Answer Question Given Context','Find Answer','Context Contains Answer','Given Context Answer Question',
+							'What Is The Answer','Answer Test','Found Context Online','Answer Friend Question','Read And Extract '],
+			'topic_classification':['Guess Title For Context']},
+
+	'cos_e/v1.11':{'qa_multiple_choice':['question_description_option_text','question_description_option_id','question_option_description_text',
+								'description_question_option_id','description_question_option_text','question_option_description_id'],
+		'explanation_generation':['rationale','aligned_with_common_sense','explain_why_human','generate_explanation_given_text','i_think']},
+	'cosmos_qa':{'qa_multiple_choice':['description_context_question_answer_text','description_context_question_text','description_context_question_answer_id',
+								'context_description_question_answer_text','no_prompt_id','no_prompt_text','context_description_question_answer_id',
+								'context_question_description_answer_id','context_description_question_text','context_question_description_answer_text','context_question_description_text'],
+				'answer_generation':['only_question_answer'],
+				'question_generation':['context_answer_to_question']},
+	'dream':{'qa_multiple_choice':['baseline','read_the_following_conversation_and_answer_the_question'],
+				'text_generation':['generate-last-utterance','answer-to-dialogue','generate-first-utterance']},
+	'qasc':{'qa_multiple_choice':['qa_with_separated_facts_1','qa_with_separated_facts_3','qa_with_separated_facts_4','qa_with_separated_facts_5',
+				'qa_with_combined_facts_1','qa_with_separated_facts_2'],
+				'qa_tf':['is_correct_1','is_correct_2']},
+	'quail':{'qa_multiple_choice':['context_question_answer_description_id','context_question_answer_description_text','description_context_question_answer_id',
+				'context_question_description_answer_text','context_question_description_answer_id','no_prompt_id',
+				'context_description_question_answer_id','no_prompt_text','context_description_question_answer_text','description_context_question_answer_text'],
+				'answer_generation':['context_question_description_text','context_description_question_text','description_context_question_text']},
+	'quarel':{'qa_multiple_choice':['do_not_use','logic_test','heres_a_story','choose_between','testing_students']},
+	'quartz':{'qa_multiple_choice':['use_info_from_question_paragraph','paragraph_question_plain_concat','use_info_from_paragraph_question','answer_question_based_on',
+				'answer_question_below','read_passage_below_choose','having_read_above_passage','given_the_fact_answer_the_q']},
+	'sciq':{'qa_multiple_choice':['Multiple Choice Question First','Multiple Choice'],
+				'answer_generation':['Direct Question','Direct Question (Closed Book)','Multiple Choice (Closed Book)']},
+	'social_i_qa':{'qa_multiple_choice':['Show choices and generate answer','Show choices and generate index'],
+				'answer_generation':['I was wondering','Generate answer'],
+				'qa_tf':['Check if a random answer is valid or not'],
+				'question_generation':['Generate the question from the answer']},
+	'wiki_hop/original':{'qa_multiple_choice':['choose_best_object_interrogative_1','choose_best_object_affirmative_1','choose_best_object_affirmative_3',
+				'choose_best_object_affirmative_2','choose_best_object_interrogative_2'],
+				'answer_generation':['explain_relation','generate_object','generate_subject','generate_subject_and_object']},
+	'wiqa':{'qa_multiple_choice':['effect_with_string_answer','effect_with_label_answer','which_of_the_following_is_the_supposed_perturbation'],
+				'qa_tf':['does_the_supposed_perturbation_have_an_effect'],
+				'text_generation':['what_might_be_the_first_step_of_the_process','what_might_be_the_last_step_of_the_process','what_is_the_missing_first_step','what_is_the_final_step_of_the_following_process']},
+	'amazon_polarity':{'sentiment':['Is_this_review','User_recommend_this_product','Is_this_product_review_positive','Is_this_review_negative',
+				'convey_negative_or_positive_sentiment','negative_or_positive_tone','user_satisfied','would_you_buy','flattering_or_not']},
+	'app_reviews':{'sentiment':['categorize_rating_using_review','convert_to_star_rating','convert_to_rating'],
+				'text_generation':['generate_review']},
+	'imdb':{'sentiment':['Movie Expressed Sentiment 2','Reviewer Opinion bad good choices','Sentiment with choices ','Reviewer Sentiment Feeling',
+				'Writer Expressed Sentiment','Movie Expressed Sentiment','Text Expressed Sentiment','Negation template for positive and negative',
+				'Reviewer Enjoyment Yes No','Reviewer Expressed Sentiment','Reviewer Enjoyment']},
+	'rotten_tomatoes':{'sentiment':['Reviewer Opinion bad good choices','Text Expressed Sentiment','Sentiment with choices ','Reviewer Enjoyment Yes No','Reviewer Enjoyment','Movie Expressed Sentiment',
+				'Writer Expressed Sentiment','Movie Expressed Sentiment 2','Reviewer Expressed Sentiment','Reviewer Sentiment Feeling']},
+	'yelp_review_full':{'sentiment':['so_i_would', 'based_on_that', 'format_star', 'this_place', 'format_score', 'on_a_scale', 'format_rating']},
+	'common_gen':{'structure_to_text':['Given concepts - type 2', 'Put together', 'choice in concept centric sentence generation', 'random task template prompt','Example prompt','Given concepts type 1','topic to sentence'],
+				'topic_generation':['topics from the sentence','sentence to concepts']},
+	'wiki_bio':{'structure_to_text':['who'],
+				'summarization':['comprehension','what_content','key_content'],
+				'topic_classification':['guess_person']},
+	'cnn_dailymail/3.0.0':{'summarization':['write_an_outline', 'news_summary', '2_or_3_sentences', 'tldr_summary', 'news_card_view','sum_in_brief','news_stock'],
+				'text_generation':['generate_story','spice_up_story']},
+	'gigaword':{'summarization':['generate_summary_for_this','make_a_title','first_sentence_title','TLDR','write_its_sentence',
+						'write_a_title_for_this_sentence','in_a_nutshell'],
+				'text_generation':['reverse_writing','write_an_article']},
+	'multi_news':{'summarization':['what are the key points','synthesize','summary scenario','summarize','distill'],
+				'text_generation':['expand (reverse task)']},
+	'samsum':{'summarization':['Summarize this dialogue:', 'Given the above dialogue write a summary', 'Summarize:', 'To sum up this dialog', 'Generate a summary for this dialogue', 'Sum up the following dialogue'],
+				'text_generation':['Write a dialogue that match this summary']},
+	'xsum':{'summarization':['DOC_write_summary_of_above', 'article_DOC_summary', 'DOC_how_would_you_rephrase_few_words', 'college_roommate_asked_DOC_so_I_recap', 'DOC_boils_down_to_simple_idea_that', 'summarize_DOC', 
+				'summarize_this_DOC_summary', 'DOC_given_above_write_one_sentence', 'read_below_DOC_write_abstract', 'DOC_tldr']},
+	'ag_news':{'topic_classification':['classify_question_first', 'classify_with_choices_question_first', 'recommend', 'which_section_choices', 'which_section', 'classify_with_choices', 'classify']},
+	'dbpedia_14':{'topic_classification':['given_list_what_category_does_the_paragraph_belong_to', 'pick_one_category_for_the_following_text', 'given_a_choice_of_categories ', 'given_a_list_of_category_what_does_the_title_belong_to']},
+	'trec':{
+		'topic_classification':['what_category_best_describe','pick_the_best_descriptor','fine_grained_open_context_first','which_category_best_describes','trec1','trec2','fine_grained_open','fine_grained_LOC','fine_grained_NUM_context_first','fine_grained_ENTY','fine_grained_NUM','fine_grained_LOC_context_first','fine_grained_DESC',
+				'fine_grained_ABBR','fine_grained_ABBR_context_first','fine_grained_HUM','fine_grained_HUM_context_first','fine_grained_DESC_context_first']
+	}
+}
+
+prompt_types=[]
+for (task_name,prompts) in prompt_configs.items():
+    for key in prompts.keys():
+        if key not in prompt_types: prompt_types.append(key)
+
+PromptTypeToId={x:i for (i,x) in enumerate(prompt_types)}
+
+PromptNameToId=dict()
+for (task_name,prompts) in prompt_configs.items():
+    for (prompt_type,prompt_names) in prompts.items():
+        for prompt_name in prompt_names:
+            PromptNameToId[prompt_name]=PromptTypeToId[prompt_type]
