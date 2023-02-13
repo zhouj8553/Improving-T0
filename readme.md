@@ -102,9 +102,10 @@ done
 ## Citation
 
 Please cite us if it is useful in your work:
-
+```
 @inproceedings{zhounot,
   title={Not All Tasks Are Born Equal: Understanding Zero-Shot Generalization},
   author={Zhou, Jing and Lin, Zongyu and Zheng, Yanan and Li, Jian and Yang, Zhilin},
   booktitle={International Conference on Learning Representations}
 }
+```
